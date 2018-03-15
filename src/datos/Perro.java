@@ -2,7 +2,7 @@ package datos;
 
 /**
  * La clase Perro, tiene sus atributos, que pueden ser modificados por el voluntario.
- * @author Ana Soler
+ * @author Ana Soler O.
  *
  */
 public class Perro {
