@@ -12,9 +12,9 @@ public class Conexion {
 		Connection con = null;
 		try {
 			String driverClassName = "com.mysql.jdbc.Driver";
-			String driverUrl = "jdbc:mysql://localhost/id5077647_adoptadog";
-			String user = "id5077647_luca";
-			String password = "luca1234";
+			String driverUrl = "jdbc:mysql://192.168.200.13/adoptadog";
+			String user = "usuario";
+			String password = "";
 			Class.forName(driverClassName);
 			con = DriverManager.getConnection(driverUrl, user, password);
 		} catch (Exception e) {
@@ -22,12 +22,11 @@ public class Conexion {
 		}
 		return con;
 	}
-	public ResultSet sentenciaSQL(Connection con){
+	public ResultSet consultaSQL(Connection con, String query){
 		Statement st = null;
 		ResultSet rs = null;
 		try {
-			st = con.createStatement();
-			String query = "SELECT * FROM PERRO";
+			st = con.createStatement();			
 			try {
 				rs = st.executeQuery(query);
 			} catch (SQLException e) {
