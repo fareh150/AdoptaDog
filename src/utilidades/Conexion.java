@@ -34,7 +34,7 @@ public class Conexion {
 				//"Te has equivocado en la query";
 			}
 		} catch (Exception e) {
-			// TODO: handle exception
+			//Aqui hay que devolver un pop up
 		}
 		return rs;
 	}
