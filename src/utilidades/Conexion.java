@@ -30,7 +30,7 @@ public class Conexion {
 			try {
 				rs = st.executeQuery(query);
 			} catch (SQLException e) {
-				//"Te has equivocado en la query ";
+				//"Te has equivocado en la query";
 			}
 		} catch (Exception e) {
 			//Aqui hay que devolver un pop up
