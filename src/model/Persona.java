@@ -1,4 +1,4 @@
-package datos;
+package model;
 /**
  * 
  * @author Ana
@@ -17,7 +17,7 @@ public class Persona {
 	private String nombre;
 	private String apellidos;
 	private String correo;
-	private String telefono;
+	private int telefono;
 	private String direccion;
 	
 	/**
@@ -31,7 +31,7 @@ public class Persona {
 		
 	}
 	
-	public Persona(String nombre, String apellidos, String correo, String telefono, String direccion) {
+	public Persona(String nombre, String apellidos, String correo, int telefono, String direccion) {
 		super();
 		this.nombre = nombre;
 		this.apellidos = apellidos;
@@ -85,14 +85,14 @@ public class Persona {
 	/**
 	 * @return the telefono
 	 */
-	public String getTelefono() {
+	public int getTelefono() {
 		return telefono;
 	}
 
 	/**
 	 * @param telefono the telefono to set
 	 */
-	public void setTelefono(String telefono) {
+	public void setTelefono(int telefono) {
 		this.telefono = telefono;
 	}
 

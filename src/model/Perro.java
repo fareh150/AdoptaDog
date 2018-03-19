@@ -1,4 +1,4 @@
-package datos;
+package model;
 
 /**
  * La clase Perro, tiene sus atributos, que pueden ser modificados por el voluntario.
@@ -9,9 +9,9 @@ public class Perro {
 	
 	@Override
 	public String toString() {
-		return String.format("Perrito [nombre=%s, edad=%s, genero=%s, tamano=%s]", nombre, edad, genero, tamano);
+		return String.format("Perrito [ID=%s, nombre=%s, edad=%s, genero=%s, tamano=%s]", ID, nombre, edad, genero, tamano);
 	}
-	
+	private int ID;
 	private String nombre;
 	private String edad;
 	private String genero;
@@ -24,14 +24,21 @@ public class Perro {
 	 * @param genero
 	 * @param tamano
 	 */
-	public Perro(String nombre, String edad, String genero, String tamano) {
+	public Perro(int ID, String nombre, String edad, String genero, String tamano) {
 		super();
+		this.ID = ID;
 		this.nombre = nombre;
 		this.edad = edad;
 		this.genero = genero;
 		this.tamano = tamano;
 	}
 	
+	public int getID() {
+		return ID;
+	}
+	public void setID(int ID) {
+		this.ID = ID;
+	}
 	public String getNombre() {
 		return nombre;
 	}
