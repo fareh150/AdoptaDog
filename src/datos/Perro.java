@@ -2,20 +2,21 @@ package datos;
 
 /**
  * La clase Perro, tiene sus atributos, que pueden ser modificados por el voluntario.
- * @author Ana Soler O.
+ * @author aSolorzano.
  *
  */
 public class Perro {
 	
 	@Override
 	public String toString() {
-		return String.format("Perro [nombre=%s, edad=%s, genero=%s, tamano=%s]", nombre, edad, genero, tamano);
+		return String.format("Perrito [nombre=%s, edad=%s, genero=%s, tamano=%s]", nombre, edad, genero, tamano);
 	}
 	
 	private String nombre;
 	private String edad;
 	private String genero;
 	private String tamano;
+
 	
 	/**
 	 * @param nombre
