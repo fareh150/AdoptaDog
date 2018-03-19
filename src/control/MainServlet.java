@@ -27,7 +27,8 @@ public class MainServlet extends HttpServlet {
         // TODO Auto-generated constructor stub
     	Conexion con = new Conexion();
     	Connection conexion = con.conectar();
-    	ResultSet rs = con.sentenciaSQL(conexion);
+    	String query = "";
+    	ResultSet rs = con.consultaSQL(conexion, query);
     	try {
     		while (rs.next()) {
         		rs.getString(1);    			
