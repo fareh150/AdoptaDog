@@ -19,6 +19,7 @@ public class Conexion {
 			con = DriverManager.getConnection(driverUrl, user, password);
 		} catch (Exception e) {
 			//Aqui hay que devolver un pop up
+			e.printStackTrace();
 		}
 		return con;
 	}

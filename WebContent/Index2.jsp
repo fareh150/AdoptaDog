@@ -1,4 +1,5 @@
 <%@ page contentType="text/html" pageEncoding="UTF-8"%>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <html lang="en">
 <head>
 <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -220,7 +221,10 @@ function carousel() {
 					
 					<c:forEach items="${listaPerros}" var="perro">
 					    <div class="col-sm-3">
-							<p><c:out value="${perro}" /></p>
+							<p><c:out value="${perro.nombre}" /></p>
+							<p><c:out value="${perro.edad}" /></p>
+							<p><c:out value="${perro.genero}" /></p>
+							<p><c:out value="${perro.tamano}" /></p>
 							<img src="https://placehold.it/150x80?text=IMAGE"
 								class="img-responsive" style="width: 100%" alt="Image">
 						</div>
