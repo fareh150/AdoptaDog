@@ -15,6 +15,7 @@ import model.Perro;
 
 /**
  * Servlet implementation class MainServlet
+ * @author DavidClaro
  */
 //@WebServlet("/MainServlet")
 public class MainServlet extends HttpServlet {
@@ -26,7 +27,6 @@ public class MainServlet extends HttpServlet {
 
 	protected void processRequest(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException{
-		// TODO Auto-generated method stub
 		
 		PerroDao perroDao = new PerroDao();
 		List<Perro> listPerros = perroDao.listarPerro();
@@ -42,7 +42,7 @@ public class MainServlet extends HttpServlet {
 	 */
 	@Override
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		// TODO Auto-generated method stub
+		
 		 processRequest(request, response);
 	}
 
@@ -51,7 +51,7 @@ public class MainServlet extends HttpServlet {
 	 */
 	@Override
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		// TODO Auto-generated method stub
+		
 		processRequest(request, response);
 	}
 
