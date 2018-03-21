@@ -19,11 +19,11 @@ public class PerroDao {
 		List<Perro> perros= new ArrayList<>();
 		Conexion con = new Conexion();
     	Connection conexion = con.conectar();
-    	String query = "SELECT * FROM PERRO";
+    	String query = "SELECT * FROM PERRO LIMIT 6";
     	ResultSet rs = con.consultaSQL(conexion, query);
     	try {
     		while (rs.next()) {
-    			Perro perrito = new Perro(rs.getInt(1), rs.getString(2), rs.getString(3), rs.getString(4), rs.getString(5), rs.getString(6));
+    			Perro perrito = new Perro(rs.getInt(1), rs.getString(2), rs.getString(3), rs.getString(4), rs.getString(5), rs.getString(6), rs.getString(7));
         		perros.add(perrito);    			
     		}
 		} catch (SQLException e) {
@@ -65,7 +65,7 @@ public class PerroDao {
     	
     	try {
     		while (rs.next()) {
-    			Perro perrito = new Perro(rs.getInt(1), rs.getString(2), rs.getString(3), rs.getString(4), rs.getString(5),  rs.getString(6));
+    			Perro perrito = new Perro(rs.getInt(1), rs.getString(2), rs.getString(3), rs.getString(4), rs.getString(5), rs.getString(6), rs.getString(7));
         		perros.add(perrito);    			
     		}
 		} catch (SQLException e) {

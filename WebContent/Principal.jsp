@@ -219,15 +219,14 @@ function carousel() {
 					<br>
 					<div class="row">
 					
-					<c:forEach end="5" items="${listaPerros}" var="perro" >
+					<c:forEach items="${listaPerros}" var="perro" >
 					    <div class="col-lg-4 col-md-5 col-sm-6">
 							<p><c:out value="${perro.nombre}" /></p>
 							<!-- <p><c:out value="${perro.edad}" /></p>  -->
 							<!-- <p><c:out value="${perro.genero}" /></p>  -->
 							<!-- <p><c:out value="${perro.tamano}" /></p>  -->
-							<p><c:out value="${perro.imagen}" /></p>
-							<img src="${perro.imagen}"
-								 class="img-responsive" style="width: 100%" alt="Image">
+							<!-- <p><c:out value="${perro.imagen}" /></p> -->
+							<img src="${perro.imagen}"  class="img-responsive" style="width: 100%" alt="Image">
 						</div>
 					</c:forEach>
 					

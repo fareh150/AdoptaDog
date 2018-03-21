@@ -16,6 +16,7 @@ public class Perro {
 	private String edad;
 	private String genero;
 	private String tamano;
+	private String raza;
 	private String imagen;
 	
 	/**
@@ -24,14 +25,15 @@ public class Perro {
 	 * @param genero
 	 * @param tamano
 	 */
-	public Perro(int ID, String nombre, String edad, String genero, String tamano, String imagen) {
+	public Perro(int ID, String nombre, String edad, String tamano, String genero, String raza, String imagen) {
 		super();
 		this.ID = ID;
 		this.nombre = nombre;
 		this.edad = edad;
-		this.genero = genero;
 		this.tamano = tamano;
-		this.tamano = imagen;
+		this.genero = genero;
+		this.raza = raza;
+		this.imagen = imagen;
 	}
 	
 	public int getID() {
