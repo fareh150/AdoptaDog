@@ -5,7 +5,7 @@
 <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-<title>1.0 ${perroFinal.nombre}</title>
+<title>1.0 ${perro.nombre}</title>
 <meta charset="UTF-8">
 </head>
 <body>

@@ -14,7 +14,7 @@ import datos.PerroDao;
 import model.Perro;
 
 /**
- * Metodo que realiza la consulta segun condiciones de los combos.
+ * Metodo que realiza la consulta segun las condiciones de los combos.
  * Servlet implementation class PerroServlet
  * @author AnaSolorzano
  */
@@ -25,6 +25,7 @@ public class PerroServlet extends HttpServlet {
 	protected void processRequest(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
 		
+		//Muestra resultados de búsqueda
 		PerroDao perroDao = new PerroDao();
 		List<Perro> listPerros = perroDao.buscarPerros(request.getParameter("edad"), request.getParameter("tamanno"),
 				request.getParameter("genero"));
