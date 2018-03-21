@@ -64,6 +64,9 @@ public class Perro {
 	public void setTamano(String tamano) {
 		this.tamano = tamano;
 	}
+	public String getImagen() {
+		return imagen;
+	}
 	public void setImagen(String imagen) {
 		this.tamano = imagen;
 	}

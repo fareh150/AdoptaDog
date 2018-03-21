@@ -64,7 +64,8 @@ footer {
 </style>
 </head>
 <body>
-
+<div class="col-sm-2"></div>
+<div class="col-sm-8">
 	<nav class="navbar navbar-inverse">
 		<div class="container-fluid">
 			<div class="navbar-header">
@@ -199,13 +200,13 @@ function carousel() {
 
 
 
-				<h1>Casi 138.000 perros abandonados en EspaÃ±a</h1>
+				<h1>Casi 138.000 perros abandonados en España</h1>
 				<p>Casi 138.000 perros abandonados fueron recogidos de las
-					calles de EspaÃ±a durante 2016 por protectoras de animales. Solo el
-					16% volviÃ³ con sus dueÃ±os y 45% fue adoptado en un nuevo hogar,
-					de acuerdo con el Estudio de Abandono y AdopciÃ³n 2017 elaborado
-					por la FundaciÃ³n Affinity. La organizaciÃ³n alerta de que la
-					principal razÃ³n de abandono es el nacimiento de camadas
+					calles de España durante 2016 por protectoras de animales. Solo el
+					16% volvio con sus dueños y 45% fue adoptado en un nuevo hogar,
+					de acuerdo con el Estudio de Abandono y Adopcion 2017 elaborado
+					por la Fundacion Affinity. La organizacion alerta de que la
+					principal razon de abandono es el nacimiento de camadas
 					indeseadas.</p>
 				<hr>
 
@@ -218,20 +219,21 @@ function carousel() {
 					<br>
 					<div class="row">
 					
-					<c:forEach items="${listaPerros}" var="perro">
-					    <div class="col-sm-3">
+					<c:forEach end="5" items="${listaPerros}" var="perro" >
+					    <div class="col-lg-4 col-md-5 col-sm-6">
 							<p><c:out value="${perro.nombre}" /></p>
-							<p><c:out value="${perro.edad}" /></p>
-							<p><c:out value="${perro.genero}" /></p>
-							<p><c:out value="${perro.tamano}" /></p>
-							<img src="https://placehold.it/150x80?text=IMAGE"
-								class="img-responsive" style="width: 100%" alt="Image">
+							<!-- <p><c:out value="${perro.edad}" /></p>  -->
+							<!-- <p><c:out value="${perro.genero}" /></p>  -->
+							<!-- <p><c:out value="${perro.tamano}" /></p>  -->
+							<p><c:out value="${perro.imagen}" /></p>
+							<img src="${perro.imagen}"
+								 class="img-responsive" style="width: 100%" alt="Image">
 						</div>
 					</c:forEach>
 					
 						
 						
-						<!-- <div class="col-sm-3">
+						<!-- <div class="col-sm-3">lg md sm
 							<p>Pepe</p>
 							<img src="https://placehold.it/150x80?text=IMAGE"
 								class="img-responsive" style="width: 100%" alt="Image">
@@ -241,7 +243,7 @@ function carousel() {
 							<img src="https://placehold.it/150x80?text=IMAGE"
 								class="img-responsive" style="width: 100%" alt="Image">
 						</div>
-						<div class="col-sm-3">
+						<div class="col-sm-3 col-lg-4 col-">
 							<p>TOfY</p>
 							<img src="https://placehold.it/150x80?text=IMAGE"
 								class="img-responsive" style="width: 100%" alt="Image">
@@ -266,6 +268,9 @@ function carousel() {
 	<footer class="container-fluid text-center">
 		<p>AdoptaDog S.A. (Todo por la pasta)</p>
 	</footer>
+	</div>
+	<div class="col-sm-2"></div>
+	
 
 </body>
 </html>
