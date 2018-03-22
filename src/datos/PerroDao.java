@@ -11,7 +11,7 @@ import utilidades.Conexion;
 /**
  * Se realiza la busqueda de todos los perros en BBDD
  * 
- * @author DavidClaro
+ * @author DavidC laro
  *
  */
 public class PerroDao {
@@ -46,7 +46,7 @@ public class PerroDao {
 	 * @param tamanno
 	 * @param genero
 	 * @return
-	 * @author AnaSolorzano
+	 * @author Ana Solorzano
 	 */
 	public List<Perro> buscarPerros(String edad, String tamanno, String genero) {
 		Conexion con = new Conexion();
@@ -84,6 +84,7 @@ public class PerroDao {
 	 * @param campo
 	 * @param andSql
 	 * @param sql
+	 * @author Ana Solorzano
 	 */
 	private void agregarFiltro(String campo, String andSql, StringBuffer sql) {
 		if (campo != null && !campo.isEmpty()) {
@@ -96,6 +97,7 @@ public class PerroDao {
 	 * Metodo que busca en BBDD toda la informacion del perro seleccionado
 	 * @param perroID
 	 * @return
+	 * @author Ana Solorzano
 	 */
 	public Perro detallePerro(int perroID) {
 		Perro perrito = new Perro();
