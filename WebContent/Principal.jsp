@@ -102,17 +102,17 @@ footer {
 					<p>Tamaño</p>
 					<select name="tamanno">
 						<option></option>
-						<option value="pequeno">pequeño</option>
-						<option value="mediano">mediano</option>
-						<option value="grande">grande</option>
+						<option value="Peque">Pequeño</option>
+						<option value="Mediano">Mediano</option>
+						<option value="Grande">Grande</option>
 					</select> <br>
 					<br>
 					<p>Edad</p>
 					<select name="edad">
 						<option></option>
-						<option value="cachorro">cachorro</option>
-						<option value="joven">joven</option>
-						<option value="mayor">mayor</option>
+						<option value="Cachorro">Cachorro</option>
+						<option value="Joven">Joven</option>
+						<option value="Adulto">Mayor</option>
 					</select> <br>
 					<br>
 					<p>Genero</p>
