@@ -27,7 +27,7 @@ public class Perro {
 	}
 	
 	/**
-	 * @param iD
+	 * @param perroiD
 	 * @param nombre
 	 * @param edad
 	 * @param tamano
