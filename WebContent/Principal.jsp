@@ -78,7 +78,7 @@ footer {
 			</div>
 			<div class="collapse navbar-collapse" id="myNavbar">
 				<ul class="nav navbar-nav">
-					<li class="active"><a href="#">Home</a></li>
+					<li class="active"><a href="MainServlet">Home</a></li>
 					<li><a href="#">Adopciones</a></li>
 					<li><a href="#">Acogida</a></li>
 					<li><a href="#">Quienes somos</a></li>
