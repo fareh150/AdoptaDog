@@ -16,7 +16,7 @@ import model.Perro;
 /**
  * Metodo que realiza la consulta segun las condiciones de los combos.
  * Servlet implementation class PerroServlet
- * @author AnaSolorzano
+ * @author Ana Solorzano
  */
 @WebServlet("/PerroServlet")
 public class PerroServlet extends HttpServlet {

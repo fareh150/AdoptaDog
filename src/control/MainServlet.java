@@ -15,7 +15,7 @@ import model.Perro;
 
 /**
  * Servlet implementation class MainServlet
- * @author DavidClaro
+ * @author David Claro
  */
 //@WebServlet("/MainServlet")
 public class MainServlet extends HttpServlet {
