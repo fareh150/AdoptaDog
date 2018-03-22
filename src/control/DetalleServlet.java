@@ -35,7 +35,7 @@ public class DetalleServlet extends HttpServlet {
      */
     public DetalleServlet() {
         super();
-       //hola
+       //hola 
     }
 
 	/**
