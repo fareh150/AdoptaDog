@@ -145,6 +145,7 @@ public class PerroDao {
 		Connection conexion = con.conectar();
 		String query = "INSERT INTO PERRO (PerroID, Nombre, Edad, Tamanno, Genero, Raza, Imagen, Estado, Descripcion)VALUES(NULL, '" + nombre + "', '" + edad + "', '" + tamano + "', '" + genero + "', '" + raza + "', '" + imagen + "', '" + estado + "', '" + descripcion + "')";
 		con.insertarSQL(conexion, query);
+		
 	}
 	/**
 	 * Se modifica un perro en BBDD con sus parametros

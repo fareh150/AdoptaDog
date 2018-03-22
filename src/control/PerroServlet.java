@@ -75,6 +75,7 @@ public class PerroServlet extends HttpServlet {
 
 		} else if (operacion.equals("listado")) {
 			// Muestra resultados de búsqueda
+			
 			PerroDao perroDao = new PerroDao();
 			List<Perro> listPerros = perroDao.buscarPerros(request.getParameter("edad"),
 					request.getParameter("tamanno"), request.getParameter("genero"));
