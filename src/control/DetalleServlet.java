@@ -21,6 +21,19 @@ import model.Perro;
 public class DetalleServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 	
+	// recojo la variable ID le hago casting a int para usarlo
+	protected void processRequest(HttpServletRequest request, HttpServletResponse response)
+			throws ServletException, IOException {
+			int c =Integer.parseInt(request.getParameter("ID"));
+	// con el ID del perro lo busco en la base de datos(capa servicios)	
+			PerroDao perrito = new PerroDao();
+			Perro perroFinal=perrito.detallePerro(c);
+			
+			request.setAttribute("perroFinal", perroFinal);
+			RequestDispatcher view = request.getRequestDispatcher("PerroDetalle.jsp");
+			view.forward(request, response);}
+			
+	
 	//Envia a PerroDetalle.jsp el detalle del perro
 	
 			/*PerroDao perroDao = new PerroDao();
