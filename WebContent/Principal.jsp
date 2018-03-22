@@ -4,7 +4,7 @@
 <head>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-<title>Bootstrap Example</title>
+<title>AdoptaDOG</title>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
@@ -102,17 +102,17 @@ footer {
 					<p>Tamaño</p>
 					<select name="tamanno">
 						<option></option>
-						<option value="pequeno">pequeño</option>
-						<option value="mediano">mediano</option>
-						<option value="grande">grande</option>
+						<option value="Peque">Pequeño</option>
+						<option value="Mediano">Mediano</option>
+						<option value="Grande">Grande</option>
 					</select> <br>
 					<br>
 					<p>Edad</p>
 					<select name="edad">
 						<option></option>
-						<option value="cachorro">cachorro</option>
-						<option value="joven">joven</option>
-						<option value="mayor">mayor</option>
+						<option value="Cachorro">Cachorro</option>
+						<option value="Joven">Joven</option>
+						<option value="Adulto">Adulto</option>
 					</select> <br>
 					<br>
 					<p>Genero</p>
