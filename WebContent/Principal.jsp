@@ -112,7 +112,7 @@ footer {
 						<option></option>
 						<option value="Cachorro">Cachorro</option>
 						<option value="Joven">Joven</option>
-						<option value="Adulto">Mayor</option>
+						<option value="Adulto">Adulto</option>
 					</select> <br>
 					<br>
 					<p>Genero</p>
