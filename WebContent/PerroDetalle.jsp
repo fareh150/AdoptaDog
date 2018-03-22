@@ -5,7 +5,7 @@
 <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-<title>1.0 ${perro.nombre}</title>
+<title>${perroFinal.nombre}</title>
 <meta charset="UTF-8">
 </head>
 <body>
@@ -51,7 +51,7 @@
       <table style="width:100%">
   <tr>
     <th>ID : </th>
-    <td><strong>${perroFinal.ID}</strong></td>
+    <td><strong>${perroFinal.perroID}</strong></td>
   </tr>
   <tr>
     <th>Nombre : </th>
@@ -75,7 +75,7 @@
       
     </div>
                          <div class="col-sm-6">
-     <img src="imgroyec/perro2.jpg" class="img-responsive" style="width:100%" alt="Image">
+     <img src="${perroFinal.imagen}"  class="img-responsive" style="width: 100%" alt="Image">
     </div>
              
          </div>

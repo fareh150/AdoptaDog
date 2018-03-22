@@ -9,8 +9,8 @@ public class Perro {
 	
 	@Override
 	public String toString() {
-		return String.format("Perrito [ID=%s, nombre=%s, edad=%s, genero=%s, tamano=%s, imagen=%s, raza=%s, estado=%s, descripcion=%s]",
-				                         perroID, nombre, edad, genero, tamano, imagen, raza, estado, descripcion);
+		return String.format("Perrito [ID=%s, nombre=%s, edad=%s, genero=%s, tamano=%s, raza=%s, imagen=%s, estado=%s, descripcion=%s]",
+				                         perroID, nombre, edad, genero, tamano, raza, imagen, estado, descripcion);
 	}
 	private int perroID;
 	private String nombre;
@@ -85,7 +85,7 @@ public class Perro {
 		return imagen;
 	}
 	public void setImagen(String imagen) {
-		this.tamano = imagen;
+		this.imagen = imagen;
 	}
 	public String getRaza() {
 		return raza;

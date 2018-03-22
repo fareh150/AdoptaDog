@@ -111,11 +111,12 @@ public class PerroDao {
 				 perrito.setNombre(rs.getString(2));
 				 perrito.setEdad(rs.getString(3));				 
 				 perrito.setTamano(rs.getString(4));
-				 perrito.setGenero(rs.getString(5));
-				 perrito.setImagen(rs.getString(6));
-				 perrito.setRaza(rs.getString(7));
-				 perrito.setDescripcion(rs.getString(8));
-				 perrito.setEstado(rs.getString(9));				
+				 perrito.setGenero(rs.getString(5));				 
+				 perrito.setRaza(rs.getString(6));
+				 perrito.setImagen(rs.getString(7));
+				 perrito.setEstado(rs.getString(8));
+				 perrito.setDescripcion(rs.getString(9));
+				 				
 			}
 		} catch (SQLException e) {
 			e.printStackTrace();
