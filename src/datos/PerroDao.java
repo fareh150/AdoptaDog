@@ -11,7 +11,7 @@ import utilidades.Conexion;
 /**
  * Se realiza la busqueda de todos los perros en BBDD
  * 
- * @author DavidC laro
+ * @author David Claro
  *
  */
 public class PerroDao {
@@ -123,4 +123,66 @@ public class PerroDao {
 		}
 		return perrito;
 	}
+	
+	/**
+	 * Se inserta un perro en BBDD con sus parametros
+	 * 
+	 * @param nombre
+	 * @param edad
+	 * @param tamano
+	 * @param genero
+	 * @param raza
+	 * @param imagen
+	 * @param estado
+	 * @param descripcion
+	 * 
+	 * @author David Claro
+	 *
+	 */
+	public void crearPerro(String nombre, String edad, String tamano, String genero, String raza, String imagen, String estado, String descripcion){
+		Conexion con = new Conexion();
+		Connection conexion = con.conectar();
+		String query = "INSERT INTO PERRO (PerroID, Nombre, Edad, Tamanno, Genero, Raza, Imagen, Estado, Descripcion)VALUES(NULL, '" + nombre + "', '" + edad + "', '" + tamano + "', '" + genero + "', '" + raza + "', '" + imagen + "', '" + estado + "', '" + descripcion + "')";
+		con.insertarSQL(conexion, query);
+	}
+	/**
+	 * Se modifica un perro en BBDD con sus parametros
+	 * 
+	 * @param perroID
+	 * @param nombre
+	 * @param edad
+	 * @param tamano
+	 * @param genero
+	 * @param raza
+	 * @param imagen
+	 * @param estado
+	 * @param descripcion
+	 * 
+	 * @author David Claro
+	 *
+	 */
+	public void modificarPerro(int perroID, String nombre, String edad, String tamano, String genero, String raza, String imagen, String estado, String descripcion){
+		Conexion con = new Conexion();
+		Connection conexion = con.conectar();
+		String query = "UPDATE PERRO SET Nombre = '" + nombre + "', Edad = '" + edad + "', Tamanno = '" + tamano + "', Genero = '" + nombre + "', Raza = '" + raza + "', Imagen = '" + imagen + "', Estado = '" + estado + "', Descripcion = '" + descripcion + "' WHERE PerroID = '" + perroID + "'";
+		con.insertarSQL(conexion, query);
+	}
+	
+	/**
+	 * Se da de baja un perro en BBDD con sus parametros
+	 * 
+	 * @param perroID
+	 * 
+	 * @author David Claro
+	 *
+	 */
+	
+	public void darBajaPerro(int perroID){
+		Conexion con = new Conexion();
+		Connection conexion = con.conectar();
+		String estado = "Baja";
+		String query = "UPDATE PERRO SET Estado = '" + estado + "' WHERE PerroID = '" + perroID + "'";
+		con.insertarSQL(conexion, query);
+	}
+	
 }

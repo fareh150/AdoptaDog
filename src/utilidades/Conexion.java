@@ -5,7 +5,10 @@ import java.sql.DriverManager;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
-
+/*
+ * 
+ * @author David Claro 
+ */
 public class Conexion {
 
 	public Connection conectar(){
@@ -37,5 +40,14 @@ public class Conexion {
 			//Aqui hay que devolver un pop up
 		}
 		return rs;
+	}
+	public void insertarSQL(Connection con, String query){
+		Statement st = null;
+		try {
+			st = con.createStatement();
+			st.executeUpdate(query);
+		} catch (Exception e) {
+			// TODO: handle exception
+		}
 	}
 }
