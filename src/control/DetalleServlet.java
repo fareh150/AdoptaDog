@@ -15,7 +15,7 @@ import model.Perro;
 
 /**
  * Servlet implementation class DetalleServlet
- * @author AnaSolorzano
+ * @author Eduardo Rodriguez
  */
 @WebServlet("/DetalleServlet")
 public class DetalleServlet extends HttpServlet {
@@ -33,22 +33,12 @@ public class DetalleServlet extends HttpServlet {
 			RequestDispatcher view = request.getRequestDispatcher("PerroDetalle.jsp");
 			view.forward(request, response);}
 			
-	
-	//Envia a PerroDetalle.jsp el detalle del perro
-	
-			/*PerroDao perroDao = new PerroDao();
-			List<Perro> listPerros = perroDao.buscarPerros(request.getParameter("edad"), request.getParameter("tamanno"),
-					request.getParameter("genero"));
-
-			request.setAttribute("listaPerros", listPerros);
-			RequestDispatcher view = request.getRequestDispatcher("Principal.jsp");
-			view.forward(request, response);*/
     /**
      * @see HttpServlet#HttpServlet()
      */
     public DetalleServlet() {
         super();
-       //hola 
+
     }
 
 	/**
