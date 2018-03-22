@@ -2,6 +2,7 @@ package datos;
 
 import java.sql.Connection;
 
+import model.Persona;
 import utilidades.Conexion;
 
 public class PersonaDao {
