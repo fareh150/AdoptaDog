@@ -105,7 +105,7 @@ public class PerroDao {
 		ResultSet rs = con.consultaSQL(conexion, query);
 		try {
 			while (rs.next()) {
-				 perrito.setID(rs.getInt(1));
+				 perrito.setperroID(rs.getInt(1));
 				 perrito.setNombre(rs.getString(2));
 				 perrito.setEdad(rs.getString(3));				 
 				 perrito.setTamano(rs.getString(4));

@@ -226,7 +226,7 @@ function carousel() {
 							<!-- <p><c:out value="${perro.genero}" /></p>  -->
 							<!-- <p><c:out value="${perro.tamano}" /></p>  -->
 							<!-- <p><c:out value="${perro.imagen}" /></p> -->
-							<img src="${perro.imagen}"  class="img-responsive" style="width: 100%" alt="Image">
+							<a href="<c:url value='DetalleServlet?ID=${perro.perroID}'/>"><img src="${perro.imagen}"  class="img-responsive" style="width: 100%" alt="Image"></a>
 						</div>
 					</c:forEach>
 					

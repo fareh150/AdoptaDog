@@ -40,7 +40,7 @@ public class Perro {
 	public Perro(int iD, String nombre, String edad, String tamano, String genero, String raza, String imagen,
 			String estado, String descripcion) {
 		super();
-		perroID = iD;
+		this.perroID = iD;
 		this.nombre = nombre;
 		this.edad = edad;
 		this.tamano = tamano;
@@ -51,10 +51,10 @@ public class Perro {
 		this.descripcion = descripcion;
 	}		
 	
-	public int getID() {
+	public int getperroID() {
 		return perroID;
 	}
-	public void setID(int ID) {
+	public void setperroID(int ID) {
 		this.perroID = ID;
 	}
 	public String getNombre() {
