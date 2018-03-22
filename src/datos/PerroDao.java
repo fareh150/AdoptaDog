@@ -59,6 +59,7 @@ public class PerroDao {
 		agregarFiltro(edad, " AND EDAD = ", sql);
 		agregarFiltro(genero, " AND GENERO = ", sql);
 		agregarFiltro(tamanno, " AND TAMANNO = ", sql);
+		agregarFiltro("Huerfano", " AND ESTADO = ", sql);
 
 		// Se ejecuta la sentencia SQL y devuelve los resultados en un objeto
 		// ResultSet
@@ -161,10 +162,10 @@ public class PerroDao {
 	 * @author David Claro
 	 *
 	 */
-	public void modificarPerro(int perroID, String nombre, String edad, String tamano, String genero, String raza, String imagen, String estado, String descripcion){
+	public void modificarPerro(int perroID, String nombre, String edad, String tamano, String genero, String raza, String imagen, String estado, String descripcion){//olvidaste cambiar de nombre a genero
 		Conexion con = new Conexion();
 		Connection conexion = con.conectar();
-		String query = "UPDATE PERRO SET Nombre = '" + nombre + "', Edad = '" + edad + "', Tamanno = '" + tamano + "', Genero = '" + nombre + "', Raza = '" + raza + "', Imagen = '" + imagen + "', Estado = '" + estado + "', Descripcion = '" + descripcion + "' WHERE PerroID = '" + perroID + "'";
+		String query = "UPDATE PERRO SET Nombre = '" + nombre + "', Edad = '" + edad + "', Tamanno = '" + tamano + "', Genero = '" + genero + "', Raza = '" + raza + "', Imagen = '" + imagen + "', Estado = '" + estado + "', Descripcion = '" + descripcion + "' WHERE PerroID = '" + perroID + "'";
 		con.insertarSQL(conexion, query);
 	}
 	
