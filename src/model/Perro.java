@@ -26,7 +26,7 @@ public class Perro {
 		super();
 	}
 	
-	/**
+	/** 
 	 * @param perroiD
 	 * @param nombre
 	 * @param edad
