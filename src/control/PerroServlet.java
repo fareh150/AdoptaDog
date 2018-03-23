@@ -53,12 +53,18 @@ public class PerroServlet extends HttpServlet {
 			crudPerro(request, response, operacion);
 		}		
 	}
-
+/**
+ * Metodo llama la alta, baja o modificacion los datos que envia PerroDao
+ * @param request
+ * @param response
+ * @param operacion
+ * @throws ServletException
+ * @throws IOException
+ */
 	private void crudPerro(HttpServletRequest request, HttpServletResponse response, String operacion)
 			throws ServletException, IOException {
 
 		// Comprobamos el tipo de accion que se solicita
-
 		PerroDao op = new PerroDao();
 
 		int perroID = request.getParameter("perroID") == null ? 0 : Integer.parseInt(request.getParameter("perroID"));
@@ -73,15 +79,11 @@ public class PerroServlet extends HttpServlet {
 
 		if (operacion.equals("alta")) {
 			// ALTA
-			// Se supone que esta en jsp de registro
-
 			op.crearPerro(nombre, edad, tamano, genero, raza, imagen, estado, descripcion);
 			response.sendRedirect("PerroServlet?operacion=listado");
 
 		} else if (operacion.equals("modificar")) {
 			// MODIFICAR
-			// viene de listado y entra en PerroDetalle.jsp falta añadir los
-			// ultimos campos
 			op.modificarPerro(perroID, nombre, edad, tamano, genero, raza, imagen, estado, descripcion);
 			response.sendRedirect("DetalleServlet?ID=" + perroID);
 
@@ -92,7 +94,13 @@ public class PerroServlet extends HttpServlet {
 
 		}
 	}
-
+/**
+ * Corresponde a la búsqueda en la pagina principal a traves de los combos: edad, tamaño y genero. Toma sólo los campos seleccionados para realizar la busqueda en BBDD.
+ * @param request
+ * @param response
+ * @throws ServletException
+ * @throws IOException
+ */
 	private void busquedaPerro(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
 		// Muestra resultados de búsqueda
