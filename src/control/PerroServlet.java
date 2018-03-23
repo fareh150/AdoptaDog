@@ -27,7 +27,7 @@ public class PerroServlet extends HttpServlet {
 	protected void doGet(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
 		// TODO Auto-generated method stub
-		doRequest(request, response);
+		//doRequest(request, response);
 	}
 
 	@Override
@@ -39,13 +39,29 @@ public class PerroServlet extends HttpServlet {
 
 	private void doRequest(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
+		System.out.println("Aqui");
 		String operacion;
+		String buscar = request.getParameter("buscar");
+		operacion = request.getParameter("operacion");
+		
+		if (buscar.equals("busqueda") ) {
+			System.out.println("Holiiii");
+			busquedaPerro(request, response);
+		}
+		if (operacion != null) {
+
+			crudPerro(request, response, operacion);
+		}		
+	}
+
+	private void crudPerro(HttpServletRequest request, HttpServletResponse response, String operacion)
+			throws ServletException, IOException {
 
 		// Comprobamos el tipo de accion que se solicita
-		operacion = request.getParameter("operacion");
+
 		PerroDao op = new PerroDao();
 
-		int perroID = request.getParameter("perroID")==null?0:Integer.parseInt(request.getParameter("perroID"));
+		int perroID = request.getParameter("perroID") == null ? 0 : Integer.parseInt(request.getParameter("perroID"));
 		String nombre = request.getParameter("nombre");
 		String edad = request.getParameter("edad");
 		String tamano = request.getParameter("tamano");
@@ -64,7 +80,8 @@ public class PerroServlet extends HttpServlet {
 
 		} else if (operacion.equals("modificar")) {
 			// MODIFICAR
-			// viene de listado y entra en PerroDetalle.jsp falta añadir los ultimos campos
+			// viene de listado y entra en PerroDetalle.jsp falta añadir los
+			// ultimos campos
 			op.modificarPerro(perroID, nombre, edad, tamano, genero, raza, imagen, estado, descripcion);
 			response.sendRedirect("DetalleServlet?ID=" + perroID);
 
@@ -73,16 +90,19 @@ public class PerroServlet extends HttpServlet {
 			op.darBajaPerro(perroID);
 			response.sendRedirect("PerroServlet?operacion=listado");
 
-		} else if (operacion.equals("listado")) {
-			// Muestra resultados de búsqueda
-			
-			PerroDao perroDao = new PerroDao();
-			List<Perro> listPerros = perroDao.buscarPerros(request.getParameter("edad"),
-					request.getParameter("tamanno"), request.getParameter("genero"));
-
-			request.setAttribute("listaPerros", listPerros);
-			RequestDispatcher view = request.getRequestDispatcher("Principal.jsp");
-			view.forward(request, response);
 		}
+	}
+
+	private void busquedaPerro(HttpServletRequest request, HttpServletResponse response)
+			throws ServletException, IOException {
+		// Muestra resultados de búsqueda
+
+		PerroDao perroDao = new PerroDao();
+		List<Perro> listPerros = perroDao.buscarPerros(request.getParameter("edad"), request.getParameter("tamanno"),
+				request.getParameter("genero"));
+
+		request.setAttribute("listaPerros", listPerros);
+		RequestDispatcher view = request.getRequestDispatcher("Principal.jsp");
+		view.forward(request, response);
 	}
 }
