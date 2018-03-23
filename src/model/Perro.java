@@ -3,7 +3,7 @@ package model;
 /**
  * La clase Perro, tiene sus atributos, que pueden ser modificados por el voluntario.
  * @author Ana Solorzano
- *
+ * aa
  */
 public class Perro {
 	
