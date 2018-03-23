@@ -77,14 +77,18 @@ tr:nth-child(even){background-color: #f2f2f2}
     <td><strong>${perroFinal.edad}</strong></td>
   </tr>
   <tr>
+      <th>Tamaño : </th>
+    <td><strong>${perroFinal.tamano}</strong></td>
+  </tr>
+  <tr>
     <th>Genero : </th>
     <td><strong>${perroFinal.genero}</strong></td>
   </tr>
-  <tr>
-    <th>Tamaño : </th>
-    <td><strong>${perroFinal.tamano}</strong></td>
+    <tr>
+      <th>Raza : </th>
+    <td><strong>${perroFinal.raza}</strong></td>
   </tr>
-  
+  <input type="submit" value="Adoptar" />
 </table>
     
       
