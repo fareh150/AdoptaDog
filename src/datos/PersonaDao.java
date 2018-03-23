@@ -1,6 +1,8 @@
 package datos;
 
 import java.sql.Connection;
+import java.sql.ResultSet;
+import java.sql.SQLException;
 
 import model.Persona;
 import utilidades.Conexion;
@@ -66,5 +68,20 @@ public class PersonaDao {
 		String perfil = "Baja";
 		String query = "UPDATE PERRO SET Perfil = '" + perfil + "' WHERE PersonaID = '" + personaID + "'";
 		con.insertarSQL(conexion, query);
+	}
+	public String sacarPerfil(String login, String contrasena){
+		Conexion con = new Conexion();
+		Connection conexion = con.conectar();
+		String query = "SELECT Perfil FROM PERSONA WHERE Login = '" + login + "' AND Password = '" + contrasena + "'";
+		ResultSet rs = con.consultaSQL(conexion, query);
+		String perfil = "";
+		try {
+			while (rs.next()) {
+				perfil = rs.getString(1);				 				
+			}
+		} catch (SQLException e) {
+			e.printStackTrace();
+		}
+		return perfil;
 	}
 }

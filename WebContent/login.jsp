@@ -22,16 +22,16 @@
 
 		<fieldset>
 
-			<form action="javascript:void(0);" method="get">
+			<form action="LoginServlet?Decidir=Iniciar" method="post">
 
 				<input type="email" required value="Email"
 					onBlur="if(this.value=='')this.value='Email'"
-					onFocus="if(this.value=='Email')this.value='' ">
+					onFocus="if(this.value=='Email')this.value='' " name="Login">
 				<!-- JS because of IE support; better: placeholder="Email" -->
 
 				<input type="password" required value="Password"
 					onBlur="if(this.value=='')this.value='Password'"
-					onFocus="if(this.value=='Password')this.value='' ">
+					onFocus="if(this.value=='Password')this.value='' " name="Contrasena">
 				<!-- JS because of IE support; better: placeholder="Password" -->
 
 				<input type="submit" value="Login">
