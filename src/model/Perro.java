@@ -1,9 +1,8 @@
 package model;
 
 /**
- * La clase Perro, tiene sus atributos, que pueden ser modificados por el voluntario.
+ * La clase Perro, tiene sus atributos, que pueden ser insertados, modificados o eliminados en BBDD.
  * @author Ana Solorzano
- * aa
  */
 public class Perro {
 	

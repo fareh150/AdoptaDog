@@ -1,14 +1,10 @@
 package model;
 /**
- * 
+ * La clase persona, tiene sus atributos, que pueden ser insertados, modificados o eliminados en BBDD.
  * @author Ana
- *
  */
 public class Persona {
-	
-	/* (non-Javadoc)
-	 * @see java.lang.Object#toString()
-	 */
+
 	@Override
 	public String toString() {
 		return String.format("Persona [nombre=%s, apellidos=%s, correo=%s, telefono=%s, direccion=%s]", nombre,
