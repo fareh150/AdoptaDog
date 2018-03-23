@@ -55,12 +55,16 @@ public class LoginServlet extends HttpServlet {
 			}else if (perfil.equals("Voluntario")) {
 				System.out.println("Soy un Voluntario");
 			}else{
-				
+				errorLogin(request, response);
 			}
 		}
 	}
 	protected void menuAdmin(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException{
 		RequestDispatcher view = request.getRequestDispatcher("Admin.jsp");
+		view.forward(request, response);
+	}
+	protected void errorLogin(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException{
+		RequestDispatcher view = request.getRequestDispatcher("FallaLogin.jsp");
 		view.forward(request, response);
 	}
 
