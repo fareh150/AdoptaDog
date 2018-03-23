@@ -39,13 +39,13 @@ public class PerroServlet extends HttpServlet {
 
 	private void doRequest(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
-		System.out.println("Aqui");
+		
 		String operacion;
 		String buscar = request.getParameter("buscar");
 		operacion = request.getParameter("operacion");
 		
 		if (buscar.equals("busqueda") ) {
-			System.out.println("Holiiii");
+
 			busquedaPerro(request, response);
 		}
 		if (operacion != null) {
