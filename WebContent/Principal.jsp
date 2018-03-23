@@ -77,7 +77,7 @@ footer {
 						<span class="icon-bar"></span> <span class="icon-bar"></span> <span
 							class="icon-bar"></span>
 					</button>
-					<a class="navbar-brand" href="#">AdoptaDog</a>
+					<a class="navbar-brand" href="MainServlet">AdoptaDog</a>
 				</div>
 				<div class="collapse navbar-collapse" id="myNavbar">
 					<ul class="nav navbar-nav">
