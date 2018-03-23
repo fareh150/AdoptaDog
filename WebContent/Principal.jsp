@@ -88,8 +88,7 @@ footer {
 						<li><a href="#">Preguntas Frecuentes</a></li>
 					</ul>
 					<ul class="nav navbar-nav navbar-right">
-						<li><a href="login.jsp"><span
-								class="glyphicon glyphicon-log-in"></span> Login</a></li>
+						<li><a href="login.jsp"><span class="glyphicon glyphicon-log-in"></span>Login</a></li>
 					</ul>
 				</div>
 			</div>
@@ -101,7 +100,8 @@ footer {
 					<p>
 
 						<!-- Se realiza el filtro de busqueda segun lo seleccionado por usuario, AnaSolorzano -->
-					<form action="/AdoptaDog/PerroServlet?buscar=busqueda" method="post">
+					<form action="/AdoptaDog/PerroServlet?buscar=busqueda"
+						method="post">
 						<p>Tamaño</p>
 						<select name="tamanno">
 							<option></option>
